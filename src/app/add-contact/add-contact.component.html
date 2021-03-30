@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">Add Contact</div>
+    <div class="card-body">
+      <div class="form-group">
+        <label><h5>Name</h5></label>
+        <input type="text" class="form-control" #cName/>
+      </div>
+      <div class="form-group">
+        <label><h5>Phone</h5></label>
+        <input type="phone" class="form-control" #cPhone/>
+      </div>
+      <button
+        class="btn btn-primary"
+        (click) = "createNewContact(cName.value, cPhone.value)"
+      >
+        Add New Account
+      </button>
+    </div>
+  </div>
+
+</div>
