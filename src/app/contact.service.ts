@@ -1,8 +1,9 @@
-import { Injectable } from "@angular/core";
+import { Injectable, EventEmitter } from "@angular/core";
 
 @Injectable()
 export class ContactService {
   display: number = 1;
+  contactInfo: EventEmitter<number> = new EventEmitter<number>();
 
   contacts = [
     { name: "John Adams", phone: "701-000-1111" },
@@ -25,7 +26,7 @@ export class ContactService {
     this.display = i;
   }
 
-  getDisplay():number {
+  getDisplay(): number {
     return this.display;
   }
   constructor() {}

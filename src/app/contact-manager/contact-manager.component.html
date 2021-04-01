@@ -7,13 +7,13 @@
   </nav>
 </div>
 <div class="container" *ngIf="1 == ctService.display">
-  <app-contact *ngFor="let c of contacts; let i = index" [contact]='c' [index]='i'
-  (editEvent) = "editContact($event)"
-  ></app-contact>
+  <app-contact *ngFor="let c of contacts; let i = index" [contact]='c' [index]='i' (editEvent)="editContact($event)">
+  </app-contact>
 </div>
 <div class="container" *ngIf="2 == ctService.display">
   <app-add-contact></app-add-contact>
 </div>
 <div class="container" *ngIf="3 == ctService.display">
   <app-edit-contact [contactIndex]="editContactIndex"></app-edit-contact>
+
 </div>
